@@ -69,14 +69,17 @@ textSize(20);
   text("food Avalible: " + foodS, 5, 490);
   //Exercise = datBase.ref("Exercise");
 
-  if(keyDown(UP_ARROW)){
-   
-    writeStock(foodS);
-  dog.addImage(dogIMG2);
-  }
+  
 
 }
 
+function keyPressed(){
+if(keyCode === UP_ARROW){
+  writeStock(foodS);
+  dog.addImage(dogIMG2);
+}
+
+}
 function readStock(data) {
   foodS = data.val();
 }
